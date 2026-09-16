@@ -1,18 +1,5 @@
 import ConnectionStatusPanel from "../components/ConnectionStatusPanel";
-import { connections as baseConnections } from "../data/connections";
-
-// Sample status overlay for the mockup — shows all three states.
-// Swap this for real mock-backend state later.
-const connections = [
-  { ...baseConnections[0] }, // facebook — connected: true
-  { ...baseConnections[1] }, // instagram — connected: true
-  {
-    ...baseConnections[2], // tiktok — force a Failed state for the demo
-    connected: true,
-    failed: true,
-    failReason: "Session expired — reconnect required",
-  },
-];
+import { connections } from "../data/connections";
 
 export default function Dashboard() {
   return (
