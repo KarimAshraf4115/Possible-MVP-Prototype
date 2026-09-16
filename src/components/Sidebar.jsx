@@ -1,9 +1,10 @@
+import { NavLink } from "react-router-dom";
 import {
-  BarChart3,
   CalendarDays,
   ChevronsLeft,
   LayoutDashboard,
   LogOut,
+  Plug,
   Settings,
   Stethoscope,
 } from "lucide-react";
@@ -11,21 +12,24 @@ import {
 const menuItems = [
   {
     name: "Dashboard",
+    path: "/",
     icon: LayoutDashboard,
   },
   {
     name: "Schedule",
+    path: "/schedule",
     icon: CalendarDays,
   },
   {
-    name: "Statistics",
-    icon: BarChart3,
+    name: "Connectors",
+    path: "/connectors",
+    icon: Plug,
   },
 ];
 
-function Sidebar({ activePage, setActivePage }) {
+function Sidebar() {
   return (
-    <aside className=" w-65 relative left-5 top-2.5 bottom-2 rounded-4xl flex flex-col px-4 py-5 border-r border-black/5 bg-white/20 backdrop-blur-md">
+    <aside className=" w-65 m-5 mb-2 rounded-4xl flex flex-col px-4 py-5 border-r border-black/5 bg-white/20 backdrop-blur-md">
       {/* Logo */}
       <div className="flex items-center justify-between px-2 mb-8">
         <div className="flex items-center gap-3">
@@ -45,24 +49,25 @@ function Sidebar({ activePage, setActivePage }) {
       <nav className="flex flex-col gap-1.5">
         {menuItems.map((item) => {
           const Icon = item.icon;
-          const active = activePage === item.name;
 
           return (
-            <button
+            <NavLink
               key={item.name}
-              onClick={() => setActivePage(item.name)}
-              className={` w-full h-12 px-4 rounded-full flex items-center gap-4 text-sm transition-all
+              to={item.path}
+              end={item.path === "/"}
+              className={({ isActive }) =>
+                ` w-full h-12 px-4 rounded-full flex items-center gap-4 text-sm transition-all
                 ${
-                  active
+                  isActive
                     ? "bg-white/80 shadow-sm text-gray-900"
                     : "text-gray-800 hover:bg-white/50"
                 }
-              `}
+              `
+              }
             >
               <Icon size={20} strokeWidth={1.8} />
-
               <span>{item.name}</span>
-            </button>
+            </NavLink>
           );
         })}
       </nav>
