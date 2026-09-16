@@ -37,12 +37,14 @@ Picking a persona changes which use cases matter — you don't need to build all
 ### Content & Publishing
 1. Schedule a post for future publishing
 2. Multi-platform posting from one place (same or platform-tailored content)
-3. Recurring/repeating posts (e.g. "every Monday 9am")
-4. Draft management (save, edit later)
-5. Content calendar view (visual, across platforms)
-6. Bulk scheduling / CSV upload
-7. Media library (reusable image/video storage)
-8. Content recycling / evergreen re-sharing
+3. Per-platform post preview — see exactly how a post will render on each selected platform before publishing, not one generic preview
+4. Post Family — link one post across multiple platforms as a single manageable unit (create once, edit/delete for all platforms, a single platform, or any chosen subset via a selector)
+5. Recurring/repeating posts (e.g. "every Monday 9am")
+6. Draft management (save, edit later)
+7. Content calendar view (visual, across platforms)
+8. Bulk scheduling / CSV upload
+9. Media library (reusable image/video storage)
+10. Content recycling / evergreen re-sharing
 
 ### Intelligence & Optimization
 9. Best-time-to-post suggestions (based on engagement data)

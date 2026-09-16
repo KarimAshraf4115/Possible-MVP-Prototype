@@ -41,6 +41,10 @@
 
 **FR-2.9** — User can delete/cancel a scheduled post before its publish time.
 
+**FR-2.10** — User can preview how a post will actually render on each selected platform (per-platform layout/preview) before publishing — not just a single generic preview.
+
+**FR-2.11** — User can create a "Post Family": select one media + caption (with optional per-platform tweaks) once, and the system publishes it as linked instances across all selected platforms. When editing or deleting a post that belongs to a Post Family, the user sees a selector defaulting to "All," with each individual platform also listed — allowing the user to select any combination of specific platforms (not just one or all), so edits/deletes can apply to the whole family, a single platform, or any chosen subset.
+
 ---
 
 ## 3. Content Calendar View
