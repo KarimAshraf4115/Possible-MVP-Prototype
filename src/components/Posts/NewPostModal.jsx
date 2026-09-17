@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { X, Globe, Camera, Music2, CalendarClock } from "lucide-react";
+import { FaYoutube } from "react-icons/fa";
 
 const platformMeta = {
   facebook: { label: "Facebook", icon: Globe },
   instagram: { label: "Instagram", icon: Camera },
   tiktok: { label: "TikTok", icon: Music2 },
+  youtube: { label: "Youtube", icon: FaYoutube },
 };
 
 // Builds a fresh, blank form — pulled out so "Reset" and "initial state"
@@ -33,8 +35,8 @@ export default function NewPostModal({ open, onClose, onCreate, connections }) {
       status === "draft"
         ? null
         : form.date && form.time
-        ? `${form.date}T${form.time}:00`
-        : null;
+          ? `${form.date}T${form.time}:00`
+          : null;
 
     return {
       id: uuidv4(),
@@ -77,6 +79,7 @@ export default function NewPostModal({ open, onClose, onCreate, connections }) {
         <div className="flex gap-2 mb-4">
           {connections.map((conn) => {
             const meta = platformMeta[conn.platform];
+            if (!meta) return null;
             const Icon = meta.icon;
             const active = form.platforms.includes(conn.platform);
             const disabled = !conn.connected || conn.failed;
@@ -92,8 +95,8 @@ export default function NewPostModal({ open, onClose, onCreate, connections }) {
                     disabled
                       ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
                       : active
-                      ? "bg-[#181818] text-white border-[#181818]"
-                      : "border-gray-200 text-gray-700 hover:bg-gray-50"
+                        ? "bg-[#181818] text-white border-[#181818]"
+                        : "border-gray-200 text-gray-700 hover:bg-gray-50"
                   }`}
               >
                 <Icon size={13} strokeWidth={2} />
