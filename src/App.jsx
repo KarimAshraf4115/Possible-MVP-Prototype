@@ -1,4 +1,4 @@
-import Layout from "./components/Layout";
+import Layout from "./components/Common/Layout";
 
 import Dashboard from "./pages/Dashboard";
 import Schedule from "./pages/Schedule";
