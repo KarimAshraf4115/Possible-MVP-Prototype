@@ -76,4 +76,74 @@ export const posts = [
     status: 'failed', // to test your failure/retry UI
     createdAt: '2026-09-11T16:30:00',
   },
+  {
+    id: uuidv4(),
+    platformContent: [
+      {
+        platform: 'facebook',
+        content: 'Flash sale ends tonight! Don’t miss out.',
+        mediaUrls: [],
+      },
+    ],
+    tags: ['sale'],
+    scheduledTime: '2026-09-17T09:00:00',
+    status: 'failed', // to test your failure/retry UI
+    createdAt: '2026-09-11T16:30:00',
+  },
+  {
+    id: uuidv4(),
+    platformContent: [
+      {
+        platform: 'facebook',
+        content: 'Flash sale ends tonight! Don’t miss out.',
+        mediaUrls: [],
+      },
+    ],
+    tags: ['sale'],
+    scheduledTime: '2026-09-17T09:00:00',
+    status: 'failed', // to test your failure/retry UI
+    createdAt: '2026-09-11T16:30:00',
+  },
+  {
+    id: uuidv4(),
+    platformContent: [
+      {
+        platform: 'facebook',
+        content: 'Flash sale ends tonight! Don’t miss out.',
+        mediaUrls: [],
+      },
+    ],
+    tags: ['sale'],
+    scheduledTime: '2026-09-17T09:00:00',
+    status: 'success', // to test your failure/retry UI
+    createdAt: '2026-09-11T16:30:00',
+  },
+  {
+    id: uuidv4(),
+    platformContent: [
+      {
+        platform: 'facebook',
+        content: 'Flash sale ends tonight! Don’t miss out.',
+        mediaUrls: [],
+      },
+    ],
+    tags: ['sale'],
+    scheduledTime: '2026-09-17T09:00:00',
+    status: 'failed', // to test your failure/retry UI
+    createdAt: '2026-09-11T16:30:00',
+  },
+  {
+    id: uuidv4(),
+    platformContent: [
+      {
+        platform: 'facebook',
+        content: 'Flash sale ends tonight! Don’t miss out.',
+        mediaUrls: [],
+      },
+    ],
+    tags: ['sale'],
+    scheduledTime: '2026-09-17T09:00:00',
+    status: 'failed', // to test your failure/retry UI
+    createdAt: '2026-09-11T16:30:00',
+  },
 ];

@@ -1,9 +1,11 @@
-import { Globe, Camera, Music2, RefreshCw, Settings2 } from "lucide-react";
+import { RefreshCw, Settings2 } from "lucide-react";
+import { FaFacebook , FaTiktok , FaInstagram , FaYoutube  } from "react-icons/fa";
 
 const platformIcons = {
-  facebook: Globe,
-  instagram: Camera,
-  tiktok: Music2,
+  facebook: FaFacebook,
+  instagram: FaInstagram,
+  tiktok: FaTiktok,
+  youtube: FaYoutube
 };
 
 // connections: array from src/data/connections.js, each optionally
